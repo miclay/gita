@@ -1,5 +1,5 @@
 {
-  "name": "proj",
+  "name": "gita",
   "description": "Easy to make project!",
   "version": "0.0.1",
   "author": "miclay",
@@ -13,10 +13,9 @@
     "type": "git",
     "url": "https://github.com/miclay/proj.git"
   },
-  "main": "bin/mkp",
+  "main": "bin/gita",
   "bin": {
-    "mkp": "./bin/mkp",
-    "project": "./bin/mkp"
+    "gita": "./bin/gita"
   },
   "dependencies": {
   },

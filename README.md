@@ -1,2 +1,2 @@
-Proj -- Easy to make project!
+GitA -- A resolution for projects management on git!
 ================
