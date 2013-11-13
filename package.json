@@ -4,10 +4,10 @@
   "version": "0.0.1",
   "author": "miclay",
   "keywords": [
+    "git",
     "project",
-    "framework",
-    "tool",
-    "proj"
+    "resolution",
+    "gita"
   ],
   "repository": {
     "type": "git",
