@@ -1,0 +1,24 @@
+{
+  "name": "proj",
+  "description": "Easy to make project!",
+  "version": "0.0.1",
+  "author": "miclay",
+  "keywords": [
+    "project",
+    "framework",
+    "tool",
+    "proj"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/miclay/proj.git"
+  },
+  "main": "bin/mkp",
+  "bin": {
+    "mkp": "./bin/mkp",
+    "project": "./bin/mkp"
+  },
+  "dependencies": {
+  },
+  "license": "MIT"
+}
