@@ -18,6 +18,7 @@
     "gita": "./bin/gita"
   },
   "dependencies": {
+    "commander": "~2.0.0"
   },
   "license": "MIT"
 }
