@@ -1,2 +1,2 @@
-GitA -- A resolution for projects management on git!
-================
+### GitA -- A resolution for multi-person development on git!
+
