@@ -1,47 +1,41 @@
 #!/usr/bin/env node
 
 var program = require('commander')
-	,gita=require('../index')
+	,gita = require('../lib/gita')
+	,pkg = require('../package')
 	,argv=process.argv;
 	
 program
-	.version(gita.pkg.version)
-	.usage('<cmd> [options]')
-	.option('-yo, --publish', '发布')
-	.option('--no-min', 'build without compress.')
-	.option('-t, --daily', 'test project on daily env.')
-	.option('-m, --comment', '添加注释')
-	.option('-v, --version', '显示GitA版本号');
+	.usage('<Commands> [Options]')
+	.version(pkg.version)
 
 program
 	.command('conf')
+	.alias('set')
 	.description('轻松配置，为你所用！')
 	.action(function() {
-		gita.cmd.conf();
+		gita.conf();
+	});
+
+program
+	.command('mreq [name]')
+	.alias('mr')
+	.description('创建并提交MergeRequest分支')
+	.action(function(name) {
+		//从master同步到当前分支
+		//创建临时分支mr_user_0918_2
+		//把mr_user_0918_2推送到origin
+		console.log(name);
 	});
 
 program
 	.command('status')
 	.description('查看当前项目的状态。')
 	.action(function() {
-		gita.st();
-	});
-
-program
-	.command('init')
-	.description('初始化当前项目为git仓库。')
-	.action(function() {
-		gita.init();
-	});
-
-program
-	.command('daily -m')
-	.description('发布到日常环境。')
-	.action(function() {
-		gita.cmd.publish();
+		gita.status();
 	});
 
 program.parse(argv);
 if(argv.length<3){
-	program.help();
+	program.outputHelp();
 }

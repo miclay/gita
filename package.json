@@ -1,7 +1,7 @@
 {
   "name": "gita",
-  "description": "A resolution for projects management on git!",
-  "version": "0.0.1",
+  "description": "A resolution for multi-person development on git!",
+  "version": "1.0.0",
   "author": "miclay",
   "keywords": [
     "git",
@@ -18,7 +18,7 @@
     "gita": "./bin/gita"
   },
   "dependencies": {
-    "commander": "~2.0.0"
+    "commander": "^2.8.1"
   },
   "license": "MIT"
 }
