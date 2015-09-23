@@ -10,11 +10,11 @@ program
 	.version(pkg.version)
 
 program
-	.command('conf')
+	.command('conf <key> <value>')
 	.alias('set')
 	.description('轻松配置，为你所用！')
-	.action(function(){
-		gita.setConf();
+	.action(function(key,value){
+		gita.setConf(key,value);
 	});
 
 program
@@ -23,13 +23,6 @@ program
 	.description('创建并提交MergeRequest分支')
 	.action(function(bname){
 		gita.mergeRequest(bname);
-	});
-
-program
-	.command('status')
-	.description('查看当前项目的状态。')
-	.action(function(){
-		gita.status();
 	});
 
 program.parse(argv);
