@@ -13,25 +13,22 @@ program
 	.command('conf')
 	.alias('set')
 	.description('轻松配置，为你所用！')
-	.action(function() {
-		gita.conf();
+	.action(function(){
+		gita.setConf();
 	});
 
 program
-	.command('mreq [name]')
+	.command('mreq [branchName]')
 	.alias('mr')
 	.description('创建并提交MergeRequest分支')
-	.action(function(name) {
-		//从master同步到当前分支
-		//创建临时分支mr_user_0918_2
-		//把mr_user_0918_2推送到origin
-		console.log(name);
+	.action(function(bname){
+		gita.mergeRequest(bname);
 	});
 
 program
 	.command('status')
 	.description('查看当前项目的状态。')
-	.action(function() {
+	.action(function(){
 		gita.status();
 	});
 
