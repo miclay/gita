@@ -10,19 +10,26 @@ program
 	.version(pkg.version)
 
 program
-	.command('conf <key> <value>')
-	.alias('set')
+	.command('mreq [customName]')
+	.alias('mr')
+	.description('远程创建MergeRequest临时分支')
+	.action(function(customName){
+		gita.mergeRequest(customName);
+	});
+
+program
+	.command('set <key> <value>')
+	.alias('conf')
 	.description('轻松配置，为你所用！')
 	.action(function(key,value){
 		gita.setConf(key,value);
 	});
 
 program
-	.command('mreq [branchName]')
-	.alias('mr')
-	.description('创建并提交MergeRequest分支')
-	.action(function(bname){
-		gita.mergeRequest(bname);
+	.command('unset <key>')
+	.description('移除配置项<key>')
+	.action(function(key){
+		gita.removeConf(key);
 	});
 
 program.parse(argv);
