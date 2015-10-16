@@ -5,7 +5,7 @@
 
 ### 2. Usage
 
-  Usage: gita <Commands> [Options]
+  Usage: `gita <Commands> [Options]`
 
 
   Commands:
